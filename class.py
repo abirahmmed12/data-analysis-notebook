@@ -1,12 +1,15 @@
-class Print_name():
-    name=''
-    age=0
-student1=Print_name()
-student1.name='abir '
-print(student1.name)
+class Result():
+    def __init__(self,name,marks):
+        self.name=name
+        self.marks=marks
+    def getting_result(self):
+        sum=0
+        for i in self.marks:
+            sum+=i
+        avg=sum/len(self.marks)
+        return avg
 
-num=[45,4,34,34,23,45,45]
-number =4
-for i in num:
-    if i==4:
-        print(i,"in the index"[i])
+    
+abir=Result('Abir',[80,90,100])
+result=abir.getting_result()
+print(result)
